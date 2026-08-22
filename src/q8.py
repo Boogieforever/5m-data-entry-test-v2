@@ -20,19 +20,23 @@ Task
 
 (a) What does the buggy version actually return for [1, 2, 3, 4, 5, 6, 8], and why?
 
-    Answer:
+    Answer: 3 is returned. The Modulo operator checks for remainder is 1 after n division by 2 before increasing the count. Only odd number have remainder 1 after divided by 2. There are 3 odd numbers in the list.
 
 (b) Fix the bug. Write the corrected function below.
     (A one-character change is enough, but you must understand why.)
 """
 
 def count_evens(numbers):
-    # your corrected code here
-    pass
+    count = 0
+    for n in numbers:
+        if n % 2 == 0:
+            count = count + 1
+    return count
+pass
 
 
 """
 (c) In one sentence, explain in plain English what `n % 2 == 0` checks.
 
-    Answer:
+    Answer: The Modulo operator checks for remainder is 0 after n division by 2. In other words, it checks for even number.
 """
